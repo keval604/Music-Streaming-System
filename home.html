@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="home.css">
+     <script src="../angular.min.js"></script>
+     <script src="home.js"></script>
+     <title>Home</title>
+</head>
+
+<body>
+     <div class="container" ng-app='music' ng-controller='music_control'>
+          <div class="box-1">
+               <div>
+                    <p><a href="./home.html"> Home</a></p>
+                    <p><a href="./Search.html">Search</a></p>
+                    <p><a href="./albums.html">Albums</a></p>
+                    <p><a href="./podcast.html">Podcast</a></p>
+                    <hr>
+                    <p><a href="./made_for_you.html">Made For You</a></p>
+               </div>
+               <div style="margin-bottom:20px">
+                    <img src="{{ music.image_url }}" id="cur_image" style="height: 11rem;">
+               </div>
+          </div>
+          <div class="box-2">
+               <div class="main">
+                    <h3>Recently played</h3>
+                    <hr>
+                    <div class="row">
+                         <div ng-repeat="music in shortcuts">
+                              <div class="card" >
+                                   <div id='{{ music.song_url }}' onclick="change_song(this.id, 'shortcuts')"><img src="{{ music.image_url }}" id='{{ music.image_url }}' onclick="change_image(this.id)" alt="Image not Found"
+                                        style="height: 11rem;"></div>
+                                        <h5 class="song-name" id='song'>{{ music.name }}</h5>
+                                        <p class="artist"> {{ music.artist}} </p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <h3>Recently played</h3>
+                    <hr>
+                    <div class="row">
+                         <div ng-repeat="recent in recents">
+                              <div class="card">
+                                   <div id='{{ recent.song_url }}' onclick="change_song(this.id)"><img src="{{ recent.image_url }}" id='{{ recent.image_url }}' onclick="change_image(this.id)" alt="Image not Found"
+                                        style="height: 11rem;"></div>
+                                        <h5 class="song-name" id='song'>{{ recent.name }}</h5>
+                                        <p class="artist"> {{ recent.artist}} </p>
+                              </div>
+                         </div>
+                    </div>
+                    <h3>Newly Relesed</h3>
+                    <hr>
+                    <div class="row">
+                         <div ng-repeat="new in new_songs">
+                              <div class="card">
+                                   <div id='{{ new.song_url }}' onclick="change_song(this.id)">
+                                        <img src="{{ new.image_url }}" id='{{ new.image_url }}' onclick="change_image(this.id)" alt="Image not Found"
+                                             style="height: 11rem;">
+                                   </div>
+                                        <h5 class="song-name" id='song'>{{ new.name }}</h5>
+                                        <p class="artist"> {{ new.artist}} </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <div class="player">
+          <p id='name'></p>
+          <p id='artist'></p>
+          <audio id='player' controls src="">
+               <!-- <source > -->
+               
+          </audio>
+     </div>
+</body>
+
+</html>

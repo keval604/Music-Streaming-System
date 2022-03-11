@@ -1,0 +1,74 @@
+     <!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="home.css">
+     <script src="../angular.min.js"></script>
+     <!-- <script src="home.js"></script> -->
+     <script src="podcast.js"></script>
+     <title>Podcast</title>
+</head>
+
+<body>
+     <div class="box-1">
+          <div>
+               <p><a href="./home.html"> Home</a></p>
+               <p><a href="./Search.html">Search</a></p>
+               <p><a href="./albums.html">Albums</a></p>
+               <p><a href="./podcast.html">Podcast</a></p>
+               <hr>
+               <p><a href="./made_for_you.html">Made For You</a></p>
+          </div>
+          <div>
+               <img src="{{ music.image_url }}" id="cur_image" style="height: 11rem; bottom: 0;">
+          </div>
+     </div>
+     <div class="container" ng-app='podcast' ng-controller='podcast_control'>
+          <div class="box-2">
+               <div class="main">
+                    <h3>Top Podcast</h3> <hr>
+                    <div class="row">
+                         <div ng-repeat="music in top_podcasts">
+                              <div id='{{ music.song_url }}' onclick="change_song(this.id)">
+                                   <img src="{{ music.image_url }}"id='{{ music.image_url }}' onclick="change_image(this.id)" alt="Image not Found" style="height: 11rem;">
+                              </div>
+                              <h5 class="song-name" id='song'>{{ music.name }}</h5>
+                              <p class="artist"> {{ music.artist}} </p>
+                         </div>
+                    </div>
+                    <h3>Health & Wellness</h3> <hr>
+                    <div class="row">
+                         <div ng-repeat="music in educational">
+                              <div id='{{ music.song_url }}' onclick="change_song(this.id)">
+                                   <img src="{{ music.image_url }}"id='{{ music.image_url }}' onclick="change_image(this.id)" alt="Image not Found" style="height: 11rem;">
+                              </div>
+                              <h5 class="song-name" id='song'>{{ music.name }}</h5>
+                              <p class="artist"> {{ music.artist}} </p>
+                         </div>
+                    </div>
+                    <h3>Lifestyle & health</h3> <hr>
+                    <div class="row">
+                         <div ng-repeat="music in top_podcasts">
+                              <div id='{{ music.song_url }}' onclick="change_song(this.id)">
+                                   <img src="{{ music.image_url }}"id='{{ music.image_url }}' onclick="change_image(this.id)" alt="Image not Found" style="height: 11rem;">
+                              </div>
+                              <h5 class="song-name" id='song'>{{ music.name }}</h5>
+                              <p class="artist"> {{ music.artist }} </p>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <div class="player">
+          <p id='name'></p>
+          <p id='artist'></p>
+          <audio id='player' controls src="">
+               <!-- <source > -->
+          </audio>
+     </div>
+</body>
+
+</html>

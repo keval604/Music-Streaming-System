@@ -1,0 +1,94 @@
+*{
+     margin: 0;
+     padding: 0;
+}
+body{
+     background-color: rgb(54, 51, 51);
+     height: 100%;
+}
+
+.container{
+     box-sizing: border-box;
+     background-color: rgb(58, 51, 51);
+     width: 100%;   
+}
+.box-1 {
+     height: 100%;
+     width: 15%;
+     position: fixed;
+     top: 0;
+     left: 0;
+     background-color: #111;
+     overflow-x: hidden;
+     padding-top: 20px;
+     display: flex; 
+     flex-direction: column; 
+     justify-content: space-between;
+}
+
+.box-1 a{
+     text-decoration: none;
+     color: #999;
+}
+.box-1 a:hover{
+     text-decoration: none;
+     color: #fff;
+}
+.box-1 p{
+     position: relative;
+     margin-left: 15px;
+     margin-bottom: 10px;
+}
+.box-2{
+     
+     margin: 10px;
+     color: #fff;
+     background-color: rgb(58, 51, 51);
+     overflow: auto;
+}
+.main {
+  margin-left: 15%; 
+  font-size: 28px;
+  padding: 0px 10px;
+}
+.row{
+     display:flex;
+     justify-content: space-between;
+     margin-bottom: 4vh ;
+}
+.song-name{
+     font-size: medium;
+}
+.artist{
+     font-size: xx-small;
+     font-weight: 50;
+}
+.player {
+     background-color: rgb(58, 51, 51);;
+     position: fixed;
+     right: 0;
+     bottom: 0;
+     width: 85%;
+}
+.player audio {
+     width: 100%;
+}
+
+hr{
+     margin-bottom: 4px;
+}
+
+.search-result{
+     display:flex;
+     margin-bottom:10vh;
+}
+
+.left{
+     width:5vw;
+     height:5vh;
+}
+
+.image-container image{
+     width: 1vw;
+     height:5vh;
+}
