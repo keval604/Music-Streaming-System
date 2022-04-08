@@ -30,7 +30,7 @@ music.controller('music_control', function ($scope) {
           artist: 'Alan Walkar',
           song_url: './songs/song41.mp3'
      },{
-          image_url: './img/Love_me.png',
+          image_url: './img/love_me.png',
           name: 'Love Me Like You Do ',
           artist: 'Ellie Goulding',
           song_url: './songs/song5.mp3'
