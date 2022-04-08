@@ -26,19 +26,18 @@ body{
      justify-content: space-between;
 }
 
-.box-1 a{
+.box-1 p{
      text-decoration: none;
      color: #999;
-}
-.box-1 a:hover{
-     text-decoration: none;
-     color: #fff;
-}
-.box-1 p{
      position: relative;
      margin-left: 15px;
      margin-bottom: 10px;
 }
+.box-1 p:hover{
+     text-decoration: none;
+     color: #fff;
+}
+
 .box-2{
      
      margin: 10px;
